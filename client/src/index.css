@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loading-indicator:before {
+  content: '';
+  background: #00000080;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loading-indicator:after {
+  content: ' ';
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  z-index: 10010;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  font-size:1.2rem;        
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #0474bf; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+:root {
+	--color-primary-background: #008069;
+	--color-primary-transparent: rgba(0, 150, 136, 0.05);
+	--color-primary-transparent-darker: rgba(0, 150, 136, 0.08);
+	--color-primary-light: #86e7c9;
+	--color-secondary: #e33e7f;
+	--color-light-blue: #4fc3f7;
+	--gray-light: #eaecf2;
+	--gray-lighter: #f2f3f6;
+	--default-text-color: #212329;
+	--lighter-text-color: rgb(90, 92, 105);
+	--shadow-light: rgba(0, 0, 45, 0.08);
+	--header-height: 56px;
+	--font-family: 'Inter', 'Roboto', 'Helvetica Neue', -apple-system,
+		BlinkMacSystemFont, 'Arial', sans-serif;
+	--wrapper-border-radius: 10px;
+	--chat-bg: #e8e0dc;
+	--chat-icon: #645652;
+	--chat-icon-dark: #463732;
+	--red-dark: #961414;
+	--primary-dialog: #00a884;
+	--secondary-dialog: #009de2
+}
+
+:root {
+	--background: hsla(0, 0%, 100%, 0.7);
+	--foreground: 240 10% 3.9%;
+	--card: 0 0% 100%;
+	--card-foreground: 240 10% 3.9%;
+	--popover: 0 0% 100%;
+	--popover-foreground: 240 10% 3.9%;
+	--primary: #008069;
+	--primary-foreground: 0 0% 98%;
+	--secondary: #007bfc;
+	--secondary-foreground: 240 5.9% 10%;
+	--muted: 240 4.8% 95.9%;
+	--muted-foreground: 240 3.8% 46.1%;
+	--accent: 240 4.8% 95.9%;
+	--accent-foreground: 240 5.9% 10%;
+	--destructive: 0 84.2% 60.2%;
+	--destructive-foreground: 0 0% 98%;
+	--border: 240 5.9% 90%;
+	--input: 240 5.9% 90%;
+	--ring: 240 5.9% 10%;
+	--radius: 0.3rem;
+}
+
+.dark {
+	--background: 240 10% 3.9%;
+	--foreground: 0 0% 98%;
+	--card: 240 10% 3.9%;
+	--card-foreground: 0 0% 98%;
+	--popover: 240 10% 3.9%;
+	--popover-foreground: 0 0% 98%;
+	--primary: 0 0% 98%;
+	--primary-foreground: 240 5.9% 10%;
+	--secondary: 240 3.7% 15.9%;
+	--secondary-foreground: 0 0% 98%;
+	--muted: 240 3.7% 15.9%;
+	--muted-foreground: 240 5% 64.9%;
+	--accent: 240 3.7% 15.9%;
+	--accent-foreground: 0 0% 98%;
+	--destructive: 0 62.8% 30.6%;
+	--destructive-foreground: 0 0% 98%;
+	--border: 240 3.7% 15.9%;
+	--input: 240 3.7% 15.9%;
+	--ring: 240 4.9% 83.9%;
+}
+
+@media only screen and (max-width: 1500px) {
+	:root {
+		--wrapper-border-radius: 0;
+	}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+html,
+body {
+	overflow: hidden;
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--default-text-color);
+	text-align: left;
+	font-size: 16px;
+	font-family: var(--font-family) !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input[type='text'],
+textarea {
+	line-height: 1.5rem;
+}
+
+svg {
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace !important;
+}
